@@ -42,7 +42,8 @@ function NavItem({
       to={link.to}
       onClick={onClick}
       className={className}
-      activeProps={{ "data-active": "true" }}
+      activeOptions={{ exact: link.to === "/" }}
+      activeProps={{ "data-active": "true", "aria-current": "page" }}
     >
       {children}
     </Link>
