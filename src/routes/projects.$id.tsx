@@ -55,7 +55,7 @@ export function ProjectDetail() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Navbar />
-      <main className="flex-1 pt-20">
+      <main className="flex-1 pt-24 sm:pt-28">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -66,7 +66,7 @@ export function ProjectDetail() {
             {/* Back Button */}
             <Link
               to="/projects"
-              className="absolute left-5 top-6 z-10 flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-sm font-semibold backdrop-blur hover:bg-background transition-colors"
+              className="absolute left-4 top-4 z-10 sm:left-5 sm:top-6 flex items-center gap-2 rounded-full bg-background/90 px-4 py-2 text-sm font-semibold backdrop-blur hover:bg-background transition-colors"
             >
               <ArrowLeft className="size-4" />
               Back
@@ -74,7 +74,7 @@ export function ProjectDetail() {
           </ProjectHero>
 
           {/* Content */}
-          <div className="mx-auto max-w-4xl px-5 py-16">
+          <div className="mx-auto max-w-4xl px-4 py-12 sm:px-5 sm:py-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export function ProjectDetail() {
                   <Badge>{project.type}</Badge>
                   {project.status && <Badge variant="accent">{project.status}</Badge>}
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">{project.title}</h1>
+                <h1 className="mb-4 break-words text-3xl font-bold sm:text-4xl md:text-5xl">{project.title}</h1>
                 <p className="text-lg text-muted-foreground">{project.description}</p>
               </div>
 

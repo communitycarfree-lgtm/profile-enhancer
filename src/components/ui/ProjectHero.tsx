@@ -9,7 +9,7 @@ interface ProjectHeroProps {
 
 export function ProjectHero({ project, children }: ProjectHeroProps) {
   return (
-    <div className="relative h-96 overflow-hidden md:h-[500px]">
+    <div className="relative h-64 overflow-hidden sm:h-96 md:h-[500px]">
       <SmartImage
         src={project.image}
         alt={`${project.title} screenshot`}
