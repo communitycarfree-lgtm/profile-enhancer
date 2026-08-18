@@ -85,7 +85,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-9 md:flex">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-8">
           {links.map((l) => (
             <NavItem
               key={l.id}
@@ -99,7 +99,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden items-center gap-2 xl:flex">
             {socials.map(({ Icon, href, label }) => (
               <a
                 key={label}
@@ -118,7 +118,7 @@ export function Navbar() {
           <button
             onClick={() => setOpen((o) => !o)}
             aria-label="Menu"
-            className="grid size-10 place-items-center rounded-full border border-border md:hidden"
+            className="grid size-10 place-items-center rounded-full border border-border lg:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -131,9 +131,9 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden md:hidden"
+            className="overflow-hidden lg:hidden"
           >
-            <div className="glass mx-auto mt-2 flex max-w-6xl flex-col gap-1 rounded-3xl p-3">
+            <div className="mx-auto mt-2 flex max-h-[70vh] max-w-6xl flex-col gap-1 overflow-y-auto rounded-3xl border border-border bg-card p-3 shadow-2xl backdrop-blur-xl">
               {links.map((l) => (
                 <NavItem
                   key={l.id}
