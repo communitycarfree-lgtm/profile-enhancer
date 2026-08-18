@@ -140,7 +140,7 @@ export function Navbar() {
                   key={l.id}
                   link={l}
                   onClick={() => setOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-start text-sm font-bold uppercase tracking-[0.16em] text-foreground transition-colors hover:bg-gold hover:text-gold-foreground"
+                  className="rounded-2xl px-4 py-3 text-start text-sm font-bold uppercase tracking-[0.16em] text-foreground transition-colors hover:bg-gold hover:text-gold-foreground data-[active=true]:bg-gold data-[active=true]:text-gold-foreground"
                 >
                   {tr(l.key)}
                 </NavItem>
