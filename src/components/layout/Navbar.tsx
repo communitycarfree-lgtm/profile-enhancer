@@ -92,7 +92,7 @@ export function Navbar() {
               key={l.id}
               link={l}
               onClick={() => setOpen(false)}
-              className="relative text-xs font-bold uppercase tracking-[0.18em] text-foreground/85 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 hover:text-gold hover:after:origin-left hover:after:scale-x-100"
+              className="relative text-xs font-bold uppercase tracking-[0.18em] text-foreground/85 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 hover:text-gold hover:after:origin-left hover:after:scale-x-100 data-[active=true]:text-gold data-[active=true]:after:origin-left data-[active=true]:after:scale-x-100"
             >
               {tr(l.key)}
             </NavItem>
