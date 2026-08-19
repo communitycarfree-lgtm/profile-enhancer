@@ -9,12 +9,12 @@ export function ProjectOverview({ detail }: { detail: ProjectDetailContent }) {
   return (
     <section>
       <DetailSectionHeader icon={Layers} title={tr("project.detail.overview")} />
-      <p className="mb-6 font-display text-xl font-bold text-foreground md:text-2xl">
+      <p className="type-h3 mb-6 text-foreground">
         {detail.tagline}
       </p>
       <div className="space-y-5">
         {detail.overview.map((paragraph) => (
-          <p key={paragraph} className="text-base leading-relaxed text-foreground/70 md:text-lg">
+          <p key={paragraph} className="type-lead leading-relaxed text-foreground/70">
             {paragraph}
           </p>
         ))}
@@ -51,7 +51,7 @@ function NarrativeCard({
     <div className="rounded-2xl border border-border bg-card p-8">
       <div className="mb-4 flex items-center gap-3 text-primary">
         <Icon className="size-5" />
-        <h3 className="font-display text-sm font-black tracking-widest uppercase">{title}</h3>
+        <h3 className="type-label">{title}</h3>
       </div>
       <p className="leading-relaxed text-foreground/70">{body}</p>
     </div>
@@ -70,13 +70,13 @@ export function ProjectFeatures({ detail }: { detail: ProjectDetailContent }) {
             key={feature.title}
             className="rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/50"
           >
-            <div className="mb-3 font-mono text-xs font-black text-primary">
+            <div className="type-micro mb-3 font-mono text-primary normal-case">
               {String(index + 1).padStart(2, "0")}
             </div>
-            <h3 className="mb-2 font-display text-lg font-black uppercase text-card-foreground">
+            <h3 className="type-h4 mb-2 text-card-foreground">
               {feature.title}
             </h3>
-            <p className="text-sm leading-relaxed text-foreground/60">{feature.description}</p>
+            <p className="type-body leading-relaxed text-foreground/60">{feature.description}</p>
           </div>
         ))}
       </div>

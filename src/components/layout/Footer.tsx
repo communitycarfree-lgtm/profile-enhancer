@@ -122,7 +122,7 @@ export function Footer() {
 
             <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6 relative z-10">
               {/* Headline */}
-              <h2 className="font-['Oswald',sans-serif] text-4xl sm:text-5xl md:text-[56px] font-bold leading-[0.92] text-card-foreground tracking-normal text-center md:text-start">
+              <h2 className="type-h1 text-card-foreground text-center md:text-start">
                 {tr("footer.headline1")}
                 <br />
                 {tr("footer.headline2")}
@@ -152,13 +152,13 @@ export function Footer() {
 
               {/* MS Square Badge */}
               <div className="grid place-items-center rounded-[8px] bg-foreground px-2.5 py-1 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                <span className="keep-latin font-['Oswald',sans-serif] text-xl sm:text-2xl font-bold leading-none text-background tracking-tighter">
+                <span className="keep-latin font-display text-xl sm:text-2xl font-bold leading-none text-background tracking-tighter">
                   MS
                 </span>
               </div>
 
               {/* Spaced MOSTAFA SAMIR Text */}
-              <div className="keep-latin flex flex-col text-start font-sans text-[10px] sm:text-[11px] font-black tracking-[0.22em] text-foreground leading-tight uppercase">
+              <div className="keep-latin flex flex-col text-start type-micro text-foreground">
                 <span>MOSTAFA</span>
                 <span>SAMIR</span>
               </div>
@@ -170,7 +170,7 @@ export function Footer() {
                 <Link
                   key={item.key}
                   to={item.to}
-                  className="font-sans text-xs sm:text-sm font-extrabold tracking-[0.25em] text-foreground transition-opacity duration-200 hover:opacity-75 uppercase"
+                  className="nav-label text-foreground transition-opacity duration-200 hover:opacity-75"
                 >
                   {tr(item.key)}
                 </Link>
@@ -178,7 +178,7 @@ export function Footer() {
             </nav>
 
             {/* Copyright */}
-            <p className="text-center md:text-end font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-foreground/80 uppercase leading-tight">
+            <p className="text-center md:text-end type-micro font-bold text-foreground/80">
               {tr("footer.copyright").replace("{year}", String(new Date().getFullYear()))}
               <br />
               {tr("footer.rights")}

@@ -19,13 +19,13 @@ export function ProjectsExplorer() {
       <div className="mx-auto max-w-6xl px-5">
         <Reveal>
           <header className="mb-8 max-w-2xl text-center md:text-start">
-            <span className="rounded-xl bg-foreground/10 px-3 py-1 font-sans text-[11px] font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-2">
+            <span className="eyebrow rounded-xl bg-foreground/10 px-3 py-1 text-primary border border-border inline-block mb-2">
               {tr("projects.index.eyebrow")}
             </span>
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight uppercase">
+            <h1 className="type-h1 text-foreground">
               {tr("projects.index.title")}
             </h1>
-            <p className="mt-2 font-sans text-sm text-foreground/90">{tr("projects.index.desc")}</p>
+            <p className="type-body mt-2 text-foreground/90">{tr("projects.index.desc")}</p>
           </header>
         </Reveal>
 
@@ -44,7 +44,7 @@ export function ProjectsExplorer() {
           counts={explorer.counts}
         />
 
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-3 text-sm text-foreground/90 font-medium">
+        <div className="type-body mb-8 flex flex-wrap items-center justify-between gap-3 text-foreground/90 font-medium">
           <p>
             {tr("projects.index.showing")}{" "}
             <span className="font-bold text-foreground">{explorer.filtered.length}</span>{" "}
@@ -55,7 +55,7 @@ export function ProjectsExplorer() {
           {explorer.hasActiveFilters && (
             <button
               onClick={explorer.reset}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-foreground/10 border border-border px-4 py-1.5 font-sans text-xs font-black tracking-wider uppercase text-foreground hover:bg-foreground/20 transition-colors"
+              className="type-label inline-flex items-center gap-1.5 rounded-xl bg-foreground/10 border border-border px-4 py-1.5 text-foreground hover:bg-foreground/20 transition-colors"
             >
               <X className="size-3.5 text-primary" />
               {tr("projects.index.reset")}
