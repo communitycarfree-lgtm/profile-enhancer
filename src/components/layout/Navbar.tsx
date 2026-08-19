@@ -88,13 +88,13 @@ export function Navbar() {
 
           {/* MS Red Square */}
           <div className="grid place-items-center rounded-[4px] bg-[#FF4B35] px-1.5 py-0.5 shadow-sm">
-            <span className="keep-latin font-['Oswald',sans-serif] text-xs font-bold leading-none text-white tracking-tighter">
+            <span className="keep-latin font-display text-xs font-bold leading-none text-white tracking-tighter">
               MS
             </span>
           </div>
 
           {/* MOSTAFA SAMIR Text */}
-          <div className="keep-latin flex flex-col text-start font-sans text-[8px] font-black tracking-[0.2em] text-foreground leading-tight uppercase">
+          <div className="keep-latin flex flex-col text-start type-micro text-3xs text-foreground">
             <span>MOSTAFA</span>
             <span>SAMIR</span>
           </div>
@@ -109,7 +109,7 @@ export function Navbar() {
               onMouseEnter={() => prefetchRouteLottie(l.to)}
               onFocus={() => prefetchRouteLottie(l.to)}
               onTouchStart={() => prefetchRouteLottie(l.to)}
-              className="font-sans text-[11px] font-extrabold tracking-[0.25em] text-foreground transition-opacity hover:opacity-75 uppercase"
+              className="nav-label text-foreground transition-opacity hover:opacity-75"
             >
               {tr(l.key)}
             </Link>
@@ -149,7 +149,7 @@ export function Navbar() {
           <button
             onClick={toggleLang}
             aria-label={tr("common.language")}
-            className="flex h-8 items-center gap-1.5 rounded-2xl bg-foreground/10 border border-border px-2.5 text-[11px] font-extrabold text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
+            className="flex h-8 items-center gap-1.5 rounded-2xl bg-foreground/10 border border-border px-2.5 type-micro text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
             title={tr("common.language")}
           >
             <Globe className="size-3.5 text-[#FF4B35]" />
@@ -199,7 +199,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               onTouchStart={() => prefetchRouteLottie(l.to)}
               onFocus={() => prefetchRouteLottie(l.to)}
-              className="rounded-2xl px-4 py-2.5 text-start font-sans text-xs font-black tracking-[0.2em] uppercase text-foreground hover:bg-foreground/10"
+              className="rounded-2xl px-4 py-2.5 text-start type-label text-foreground hover:bg-foreground/10"
             >
               {tr(l.key)}
             </Link>
@@ -209,7 +209,7 @@ export function Navbar() {
               href="https://github.com/Mostafa-SAID7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans text-xs font-bold text-foreground hover:opacity-75"
+              className="inline-flex items-center gap-2 type-body font-bold text-foreground hover:opacity-75"
             >
               <Github className="size-4" /> GitHub
             </a>
@@ -218,7 +218,7 @@ export function Navbar() {
               href="https://linkedin.com/in/mostafasamirsaid"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans text-xs font-bold text-foreground hover:opacity-75"
+              className="inline-flex items-center gap-2 type-body font-bold text-foreground hover:opacity-75"
             >
               <Linkedin className="size-4" /> LinkedIn
             </a>
