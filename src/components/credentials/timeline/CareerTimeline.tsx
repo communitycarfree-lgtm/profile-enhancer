@@ -29,10 +29,10 @@ export function CareerTimeline() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: EASE }}
         >
-          <h2 className="text-center font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+          <h2 className="type-h2 text-center">
             {tr("events.title")}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
+          <p className="type-lead mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
             {tr("events.desc")}
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ export function CareerTimeline() {
             className="flex flex-col gap-4"
           >
             {items.length === 0 && (
-              <p className="text-center text-sm text-muted-foreground">{tr("events.empty")}</p>
+              <p className="type-body text-center text-muted-foreground">{tr("events.empty")}</p>
             )}
 
             {items.map((item) => (
@@ -75,7 +75,7 @@ export function CareerTimeline() {
         <div className="mt-10 flex justify-center">
           <Link
             to="/experience"
-            className="inline-flex items-center gap-2 rounded-xl border border-border bg-foreground/5 px-6 py-3 font-sans text-xs font-black tracking-[0.18em] uppercase transition-colors hover:bg-foreground/15"
+            className="type-label inline-flex items-center gap-2 rounded-xl border border-border bg-foreground/5 px-6 py-3 transition-colors hover:bg-foreground/15"
           >
             {tr("events.cta")}
             <ArrowRight className="size-3.5 rtl:rotate-180" />

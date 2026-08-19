@@ -25,12 +25,10 @@ export function Hero() {
           </h1>
 
           {/* Subtitle & Trophy Badge */}
-          <div
-            style={{ animationDelay: "0.18s" }}
-            className="enter-up mt-6 flex flex-col items-center lg:items-start gap-4"
+          <div className="type-in type-delay-2 mt-6 flex flex-col items-center lg:items-start gap-4"
           >
             <div className="flex items-center gap-3">
-              <p className="max-w-md text-sm sm:text-base font-medium leading-snug text-foreground/90 text-center lg:text-start">
+              <p className="max-w-md type-lead text-foreground/90 text-center lg:text-start">
                 {tr("hero.subtitle")}
               </p>
               <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-foreground/10 border border-border text-foreground">
@@ -49,7 +47,7 @@ export function Hero() {
                     className={`size-3.5 fill-primary-foreground text-primary-foreground ${dir === "rtl" ? "me-0.5 rotate-180" : "ms-0.5"}`}
                   />
                 </span>
-                <span className="whitespace-nowrap font-sans text-xs font-black tracking-[0.2em] text-card-foreground uppercase">
+                <span className="whitespace-nowrap type-label text-card-foreground">
                   {tr("hero.cta")}
                 </span>
               </a>
@@ -63,7 +61,7 @@ export function Hero() {
                 <span className="grid size-7 place-items-center rounded-xl bg-primary-foreground/15 text-primary-foreground transition-transform duration-300 group-hover:translate-y-0.5">
                   <Download className="size-3.5" />
                 </span>
-                <span className="whitespace-nowrap font-sans text-xs font-black tracking-[0.2em] text-primary-foreground uppercase">
+                <span className="whitespace-nowrap type-label text-primary-foreground">
                   {tr("hero.cv")}
                 </span>
               </a>
