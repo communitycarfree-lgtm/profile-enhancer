@@ -12,15 +12,12 @@ export function Hero() {
         {/* Left Column Text & Action */}
         <div className="relative z-10 text-center lg:text-start">
           {/* Eyebrow Label */}
-          <p className="enter-up mb-4 font-sans text-xs font-black tracking-[0.35em] text-primary uppercase">
+          <p className="type-in mb-4 eyebrow-wide text-primary">
             {tr("hero.eyebrow")}
           </p>
 
-          {/* Large Oswald Headline */}
-          <h1
-            style={{ animationDelay: "0.08s" }}
-            className="enter-up font-display text-[64px] sm:text-[84px] md:text-[104px] font-bold uppercase leading-[0.85] text-foreground tracking-normal"
-          >
+          {/* Display headline */}
+          <h1 className="type-in type-delay-1 type-display text-foreground">
             {tr("hero.name.first")}
             <br />
             {tr("hero.name.last")}
